@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode.linkedlist;
+package com.hc.algorithm.leetcode;
 
 
 import com.hc.algorithm.bean.ListNode;

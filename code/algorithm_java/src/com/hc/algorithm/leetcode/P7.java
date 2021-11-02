@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode.easy;
+package com.hc.algorithm.leetcode;
 
 /**
  * https://leetcode.com/problems/reverse-integer/

@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode.easy;
+package com.hc.algorithm.leetcode;
 
 import com.hc.algorithm.main.basic.NumberAlgorithm;
 
