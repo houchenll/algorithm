@@ -1,6 +1,7 @@
 package com.hc.algorithm.leetcode;
 
 import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
 import com.hc.algorithm.util.PrintUtil;
 
 /**
@@ -13,7 +14,7 @@ public class P19 {
 
     public static void main(String[] args) {
         P19 p19 = new P19();
-        ListNode test = PrintUtil.generateListNode(new int[]{1,2,3});
+        ListNode test = LinkTool.generateListNode(new int[]{1,2,3});
         ListNode result = p19.mySolution2(test, 3);
         PrintUtil.printLinkList(result);
     }

@@ -2,6 +2,7 @@ package com.hc.algorithm.leetcode;
 
 
 import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
 import com.hc.algorithm.util.PrintUtil;
 
 /**
@@ -14,10 +15,10 @@ public class P21 {
 
     public static void main(String[] args) {
         // 生成测试数据
-        ListNode l1 = PrintUtil.generateListNode(new int[]{1, 2, 4});
+        ListNode l1 = LinkTool.generateListNode(new int[]{1, 2, 4});
         PrintUtil.printLinkList(l1);
 
-        ListNode  l2 = PrintUtil.generateListNode(new int[]{1, 3, 4});
+        ListNode  l2 = LinkTool.generateListNode(new int[]{1, 3, 4});
         PrintUtil.printLinkList(l2);
 
         P21 p21 = new P21();

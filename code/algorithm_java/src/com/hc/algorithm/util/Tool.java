@@ -1,10 +1,12 @@
 package com.hc.algorithm.util;
 
+import com.hc.algorithm.bean.ListNode;
+
 public class Tool {
 
     /**
      * 交换整形数组中序号为i和j的两个数
-     *
+     * <p>
      * i==j时，不必交换
      */
     public static void swap2(int[] array, int i, int j) {
@@ -17,7 +19,7 @@ public class Tool {
 
     /**
      * 交换整形数组中序号为i和j的两个数
-     *
+     * <p>
      * 注意：如果i==j，使用这种方法交换，会导致i位置的数字变为0。所以当i==j时，必须停止交换
      */
     public static void swap(int[] array, int i, int j) {

@@ -49,17 +49,4 @@ public class PrintUtil {
         System.out.println("]");
     }
 
-    public static ListNode generateListNode(int[] array) {
-        if (array == null || array.length == 0) return null;
-        int len = array.length;
-
-        ListNode head = null;
-        // 倒序，从最后向最前
-        for (int i = len - 1; i >= 0; i--) {
-            // 取出一个新数据，生成新节点，新节点的下一个节点是之前的头节点，然后更新头节点指向当前新节点
-            head = new ListNode(array[i], head);
-        }
-        return head;
-    }
-
 }
