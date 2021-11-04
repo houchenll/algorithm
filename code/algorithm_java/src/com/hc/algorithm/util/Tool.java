@@ -1,7 +1,5 @@
 package com.hc.algorithm.util;
 
-import com.hc.algorithm.bean.ListNode;
-
 public class Tool {
 
     /**
