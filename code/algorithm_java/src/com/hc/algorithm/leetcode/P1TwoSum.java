@@ -47,7 +47,7 @@ public class P1TwoSum {
     /**
      * 使用hash map加速查找
      * 1 ms, faster than 99.67%, 39.3 MB, less than 62.22%
-     * */
+     */
     private int[] solution2(int[] nums, int target) {
         // 考虑到暴力解法速度慢的原因是查找target-nums[i]太慢导致的，我们使用hashMap来加速，使这个查找从O(N)降低到O(1)
         // 遍历数组，对每个数字，查看map中是否有target-nums[i]，如果有，直接返回他们的序号，如果没有，把这个数字和它的序号加到map
@@ -55,43 +55,12 @@ public class P1TwoSum {
         // 1. 使用map在O(1)时间内完成了查找target-nums[i]
         // 2. 遍历数组每个数字时，它们和之前遍历的数字比较，看能不能相加等于target
         // 3. 先比较，先添加到map，避免了自己和自己相加等于target，也避免了两个相同的数字序号不同相加等于target时无法处理的问题
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (map.containsKey(target - nums[i])) {
-                return new int[]{map.get(target - nums[i]), i};
-            }
-            map.put(nums[i], i);
-        }
-        return new int[]{0, 0};
-    }
-
-    /**
-     * 暴力解法
-     * */
-    private int [] forceSolution(int[] nums, int target) {
-        int[] indices = {0, 0};
-        // 从第1个数字到倒数第2个数字，逐个遍历
-        for (int i = 0; i < nums.length - 1; i++) {
-            // 从第i+1个数字，到最后一个数字，逐个遍历
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
-                    indices[0] = i;
-                    indices[1] = j;
-                    return indices;
-                }
-            }
-        }
-        return indices;
-    }
-
-    private int[] hashSolution(int[] nums, int target) {
         int len = nums.length;
-        HashMap<Integer, Integer> table = new HashMap<>(len - 1);
-        table.put(nums[0], 0);
-        for (int i = 1; i < len; i++) {
-            int second = target - nums[i];
-            if (table.containsKey(second)) {
-                return new int[]{table.get(second), i};
+        HashMap<Integer, Integer> table = new HashMap<>(len);
+        for (int i = 0; i < len; i++) {
+            int key = target - nums[i];
+            if (table.containsKey(key)) {
+                return new int[]{table.get(key), i};
             }
             table.put(nums[i], i);
         }
