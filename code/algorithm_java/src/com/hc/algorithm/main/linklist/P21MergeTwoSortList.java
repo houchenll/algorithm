@@ -14,7 +14,7 @@ public class P21MergeTwoSortList {
         ListNode l1 = LinkTool.generateListNode(new int[]{1, 2, 4});
         LinkTool.printLinkList(l1);
 
-        ListNode  l2 = LinkTool.generateListNode(new int[]{1, 3, 4});
+        ListNode l2 = LinkTool.generateListNode(new int[]{1, 3, 4});
         LinkTool.printLinkList(l2);
 
         P21MergeTwoSortList p21 = new P21MergeTwoSortList();
@@ -35,7 +35,7 @@ public class P21MergeTwoSortList {
      * 指向此节点，建立连接，然后pTail再顺连接指向该节点，lx的头节点顺连接下移。
      * 空间复杂度：O(1)
      * 时间复杂度：O(M+N) M和N分别为两个链表的长度
-     * */
+     */
     private ListNode mySolution1(ListNode l1, ListNode l2) {
         // pHead指向新链表头节点，pTail指向新链表尾节点，初始都为null
         ListNode pHead = null, pTail = null;
@@ -89,7 +89,7 @@ public class P21MergeTwoSortList {
      * 当某链表为空时，直接返回另一链表
      * 时间复杂度：O(n + m)O(n+m)，其中 nn 和 mm 分别为两个链表的长度
      * 空间复杂度：O(n + m)O(n+m)，其中 nn 和 mm 分别为两个链表的长度
-     * */
+     */
     private ListNode recursion(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;
@@ -108,34 +108,13 @@ public class P21MergeTwoSortList {
      * 迭代
      * 和我的方法差不多，优化处在于：
      * 1. 只处理l1和l2都不为空的情况，当l1或l2为空时，停止遍历，直接拼接
-     * 2. pre.next时不用断开与原链表连接
+     * 2. tail.next时不用断开与原链表连接
      * 3. 创建preHead结点，作为头结点的前一结点。最后返回preHead.next
      * 时间复杂度：O(n + m)O(n+m)，其中 nn 和 mm 分别为两个链表的长度
      * 空间复杂度：O(1)O(1)。我们只需要常数的空间存放若干变量。
-     * */
+     */
     private ListNode iterator(ListNode l1, ListNode l2) {
-        // 创建一个preHead结点
-        ListNode preHead = new ListNode(-1, null);
-
-        ListNode prev = preHead;
-
-        // 只处理l1和l2都不为空的情况
-        while (l1 != null && l2 != null) {
-            if (l1.val <= l2.val) {
-                prev.next = l1;
-                l1 = l1.next;
-            } else {
-                prev.next = l2;
-                l2 = l2.next;
-            }
-            prev = prev.next;
-        }
-
-        // 合并后 l1 和 l2 最多只有一个还未被合并完，我们直接将链表末尾指向未合并完的链表即可
-        prev.next = l1 != null ? l1 : l2;
-
-        return preHead.next;
+        return LinkTool.mergeTwoList(l1, l2);
     }
 
 }
-

@@ -2,7 +2,7 @@ package com.hc.algorithm.main.linklist;
 
 /**
  * 链表工具
- * */
+ */
 public class LinkTool {
 
     /**
@@ -35,7 +35,7 @@ public class LinkTool {
     /**
      * 翻转链表：有头结点和尾结点，翻转部分链表
      * 不断把当前头结点插入到原尾结点下一个结点位置
-     * */
+     */
     public static ListNode[] reverseLink(ListNode head, ListNode tail) {
         // prev为翻转后链表的第1个结点
         ListNode prev = tail.next;
@@ -79,6 +79,38 @@ public class LinkTool {
         }
 
         return hair.next;
+    }
+
+    /**
+     * 合并两个有序链表
+     * 1. 只处理l1和l2都不为空的情况，当l1或l2为空时，停止遍历，直接拼接
+     * 2. tail.next时不用断开与原链表连接
+     * 3. 创建preHead结点，作为头结点的前一结点。最后返回preHead.next
+     * 时间复杂度：O(n + m)，n 和 mm 分别为两个链表的长度
+     * 空间复杂度：O(1)
+     */
+    public static ListNode mergeTwoList(ListNode l1, ListNode l2) {
+        if (l1 == null || l2 == null) {
+            return l1 == null ? l2 : l1;
+        }
+
+        ListNode preHead = new ListNode();
+        ListNode tail = preHead, p1 = l1, p2 = l2;
+
+        while (p1 != null && p2 != null) {
+            if (p1.val <= p2.val) {
+                tail.next = p1;
+                p1 = p1.next;
+            } else {
+                tail.next = p2;
+                p2 = p2.next;
+            }
+            tail = tail.next;
+        }
+
+        tail.next = p1 != null ? p1 : p2;
+
+        return preHead.next;
     }
 
     // 打印链表
