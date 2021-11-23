@@ -1,7 +1,5 @@
 package com.hc.algorithm.main.linklist;
 
-import com.hc.algorithm.main.linklist.ListNode;
-
 /**
  * 链表工具
  * */

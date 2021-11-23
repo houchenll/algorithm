@@ -7,7 +7,7 @@ package com.hc.algorithm.main.linklist;
  * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
  * 递归、链表
  */
-public class P21 {
+public class P21MergeTwoSortList {
 
     public static void main(String[] args) {
         // 生成测试数据
@@ -17,7 +17,7 @@ public class P21 {
         ListNode  l2 = LinkTool.generateListNode(new int[]{1, 3, 4});
         LinkTool.printLinkList(l2);
 
-        P21 p21 = new P21();
+        P21MergeTwoSortList p21 = new P21MergeTwoSortList();
         ListNode result = p21.mergeTwoLists(l1, l2);
         LinkTool.printLinkList(result);
     }

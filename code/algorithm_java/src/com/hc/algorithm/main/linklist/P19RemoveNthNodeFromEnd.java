@@ -6,10 +6,10 @@ package com.hc.algorithm.main.linklist;
  * 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点
  * 进阶：你能尝试使用一趟扫描实现吗？
  */
-public class P19 {
+public class P19RemoveNthNodeFromEnd {
 
     public static void main(String[] args) {
-        P19 p19 = new P19();
+        P19RemoveNthNodeFromEnd p19 = new P19RemoveNthNodeFromEnd();
         ListNode test = LinkTool.generateListNode(new int[]{1,2,3});
         ListNode result = p19.mySolution2(test, 3);
         LinkTool.printLinkList(result);
