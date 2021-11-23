@@ -1,6 +1,6 @@
-package com.hc.algorithm.util;
+package com.hc.algorithm.main.linklist;
 
-import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.main.linklist.ListNode;
 
 /**
  * 链表工具
@@ -81,6 +81,19 @@ public class LinkTool {
         }
 
         return hair.next;
+    }
+
+    // 打印链表
+    public static void printLinkList(ListNode head) {
+        System.out.print("[");
+        while (head != null) {
+            System.out.print(head.val);
+            if (head.next != null) {
+                System.out.print(",");
+            }
+            head = head.next;
+        }
+        System.out.println("]");
     }
 
 }

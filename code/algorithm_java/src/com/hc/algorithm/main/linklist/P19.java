@@ -1,8 +1,4 @@
-package com.hc.algorithm.leetcode;
-
-import com.hc.algorithm.bean.ListNode;
-import com.hc.algorithm.util.LinkTool;
-import com.hc.algorithm.util.PrintUtil;
+package com.hc.algorithm.main.linklist;
 
 /**
  * https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
@@ -16,7 +12,7 @@ public class P19 {
         P19 p19 = new P19();
         ListNode test = LinkTool.generateListNode(new int[]{1,2,3});
         ListNode result = p19.mySolution2(test, 3);
-        PrintUtil.printLinkList(result);
+        LinkTool.printLinkList(result);
     }
 
     public ListNode removeNthFromEnd(ListNode head, int n) {

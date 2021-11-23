@@ -1,8 +1,4 @@
-package com.hc.algorithm.leetcode;
-
-import com.hc.algorithm.bean.ListNode;
-import com.hc.algorithm.util.LinkTool;
-import com.hc.algorithm.util.PrintUtil;
+package com.hc.algorithm.main.linklist;
 
 /**
  * 25. K 个一组翻转链表
@@ -18,7 +14,7 @@ public class P25ReverseNodesInKGroup {
     public static void main(String[] args) {
         P25ReverseNodesInKGroup p25 = new P25ReverseNodesInKGroup();
         ListNode head = LinkTool.genLink(new int[]{1,2,3,4,5});
-        PrintUtil.printLinkList(p25.reverseKGroup(head, 3));
+        LinkTool.printLinkList(p25.reverseKGroup(head, 3));
     }
 
     public ListNode reverseKGroup(ListNode head, int k) {

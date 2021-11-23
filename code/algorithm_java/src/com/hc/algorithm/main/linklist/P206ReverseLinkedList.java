@@ -1,8 +1,4 @@
-package com.hc.algorithm.leetcode;
-
-import com.hc.algorithm.bean.ListNode;
-import com.hc.algorithm.util.LinkTool;
-import com.hc.algorithm.util.PrintUtil;
+package com.hc.algorithm.main.linklist;
 
 /**
  * 206. 反转链表
@@ -14,7 +10,7 @@ public class P206ReverseLinkedList {
     public static void main(String[] args) {
         P206ReverseLinkedList p206 = new P206ReverseLinkedList();
         ListNode head = LinkTool.generateListNode(new int[]{});
-        PrintUtil.printLinkList(p206.reverseList(head));
+        LinkTool.printLinkList(p206.reverseList(head));
     }
 
     public ListNode reverseList(ListNode head) {

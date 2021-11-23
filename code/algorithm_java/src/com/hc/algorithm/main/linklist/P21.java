@@ -1,9 +1,5 @@
-package com.hc.algorithm.leetcode;
+package com.hc.algorithm.main.linklist;
 
-
-import com.hc.algorithm.bean.ListNode;
-import com.hc.algorithm.util.LinkTool;
-import com.hc.algorithm.util.PrintUtil;
 
 /**
  * https://leetcode-cn.com/problems/merge-two-sorted-lists/
@@ -16,14 +12,14 @@ public class P21 {
     public static void main(String[] args) {
         // 生成测试数据
         ListNode l1 = LinkTool.generateListNode(new int[]{1, 2, 4});
-        PrintUtil.printLinkList(l1);
+        LinkTool.printLinkList(l1);
 
         ListNode  l2 = LinkTool.generateListNode(new int[]{1, 3, 4});
-        PrintUtil.printLinkList(l2);
+        LinkTool.printLinkList(l2);
 
         P21 p21 = new P21();
         ListNode result = p21.mergeTwoLists(l1, l2);
-        PrintUtil.printLinkList(result);
+        LinkTool.printLinkList(result);
     }
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {

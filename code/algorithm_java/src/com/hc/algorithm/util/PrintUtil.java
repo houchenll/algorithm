@@ -1,7 +1,5 @@
 package com.hc.algorithm.util;
 
-import com.hc.algorithm.bean.ListNode;
-
 public class PrintUtil {
 
     /**
@@ -34,19 +32,6 @@ public class PrintUtil {
             System.out.print(", " + array[i]);
         }
         System.out.println("}");
-    }
-
-    // 打印链表
-    public static void printLinkList(ListNode head) {
-        System.out.print("[");
-        while (head != null) {
-            System.out.print(head.val);
-            if (head.next != null) {
-                System.out.print(",");
-            }
-            head = head.next;
-        }
-        System.out.println("]");
     }
 
 }
