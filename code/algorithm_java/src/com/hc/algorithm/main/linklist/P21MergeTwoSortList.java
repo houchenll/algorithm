@@ -114,7 +114,7 @@ public class P21MergeTwoSortList {
      * 空间复杂度：O(1)O(1)。我们只需要常数的空间存放若干变量。
      */
     private ListNode iterator(ListNode l1, ListNode l2) {
-        return LinkTool.mergeTwoList(l1, l2);
+        return LinkTool.mergeTwoSortList(l1, l2);
     }
 
 }
