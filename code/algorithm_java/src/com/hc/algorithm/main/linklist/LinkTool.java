@@ -72,7 +72,7 @@ public class LinkTool {
             // p指向当前头结点
             ListNode p = head;
             // head指向头结点下一个结点
-            head = p.next;
+            head = head.next;
             // p结点插入到新链表头部
             p.next = hair.next;
             hair.next = p;
@@ -89,7 +89,7 @@ public class LinkTool {
      * 时间复杂度：O(n + m)，n 和 mm 分别为两个链表的长度
      * 空间复杂度：O(1)
      */
-    public static ListNode mergeTwoList(ListNode l1, ListNode l2) {
+    public static ListNode mergeTwoSortList(ListNode l1, ListNode l2) {
         if (l1 == null || l2 == null) {
             return l1 == null ? l2 : l1;
         }
@@ -111,6 +111,24 @@ public class LinkTool {
         tail.next = p1 != null ? p1 : p2;
 
         return preHead.next;
+    }
+
+    /**
+     * 寻找链表中点
+     * 用两个指针 slow 与 fast 一起遍历链表。slow 一次走一步，fast 一次走两步。那么当 fast 到达链表的末尾时，slow 必然位于中间
+     * 时间复杂度：O(N)，其中 N 是给定链表的结点数目。
+     * 空间复杂度：O(1)，只需要常数空间存放 slow 和 fast 两个指针。
+     */
+    public static ListNode midNode(ListNode head) {
+        if (null == head) {
+            return null;
+        }
+        ListNode fast = head, slow = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
     }
 
     // 打印链表
