@@ -116,6 +116,12 @@ public class LinkTool {
     /**
      * 寻找链表中点
      * 用两个指针 slow 与 fast 一起遍历链表。slow 一次走一步，fast 一次走两步。那么当 fast 到达链表的末尾时，slow 必然位于中间
+     * fast走1、3、5、7
+     * slow走1、2、3、4
+     * slow = (fast + 1) / 2
+     * 当共有奇数个节点时，slow位于中间节点
+     * 当共有偶数节点时，如果想slow位于中间偏左，需要fast停在倒数第2个节点，停止条件是fast.next.next != null
+     * 如果想slow们于中间偏右，需要fast停在最后一个节点的下个节点，停止条件是fast.next != null
      * 时间复杂度：O(N)，其中 N 是给定链表的结点数目。
      * 空间复杂度：O(1)，只需要常数空间存放 slow 和 fast 两个指针。
      */
