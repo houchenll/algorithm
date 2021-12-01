@@ -8,8 +8,30 @@ package com.hc.algorithm.main.linklist;
  */
 public class P876MiddleLink {
 
-    public ListNode middleNode(ListNode head) {
-        return LinkTool.midNode(head);
+    // 如果有两个中间节点，返回第一个
+    public ListNode middleNode1(ListNode head) {
+        if (null == head || null == head.next) {
+            return head;
+        }
+        ListNode slow = head, fast = head;
+        while (fast.next != null && head.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    // 如果有两个中间节点，返回第二个
+    public ListNode middleNode2(ListNode head) {
+        if (null == head) {
+            return null;
+        }
+        ListNode slow = head, fast = head;
+        while (null != fast && null != fast.next) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
     }
 
 }

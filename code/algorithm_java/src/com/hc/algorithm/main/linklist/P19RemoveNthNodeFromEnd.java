@@ -10,13 +10,32 @@ public class P19RemoveNthNodeFromEnd {
 
     public static void main(String[] args) {
         P19RemoveNthNodeFromEnd p19 = new P19RemoveNthNodeFromEnd();
-        ListNode test = LinkTool.generateListNode(new int[]{1,2,3});
+        ListNode test = LinkTool.generateListNode(new int[]{1, 2, 3});
         ListNode result = p19.mySolution2(test, 3);
         LinkTool.printLinkList(result);
     }
 
+    /**
+     * 最佳实践：双指针法
+     * 定义哑节点，目的是second最后指向的是倒数第n个节点
+     * 定义first结点，初始指向head
+     * 先于second移动n个节点，second开始移动时first先于它n个节点，
+     * fast移到到null时，second和fast间有n个节点，second指向倒数第n个节点
+     * 空间复杂度：O(N)
+     * 时间复杂度：O(1)
+     */
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        return null;
+        ListNode dummy = new ListNode(0, head);
+        ListNode first = head, second = dummy;
+        for (int i = 0; i < n; i++) {
+            first = first.next;
+        }
+        while (first != null) {
+            first = first.next;
+            second = second.next;
+        }
+        second.next = second.next.next;
+        return dummy.next;
     }
 
     /**
@@ -61,7 +80,7 @@ public class P19RemoveNthNodeFromEnd {
 
     /**
      * 看别人题解后优化版本
-     * */
+     */
     public ListNode mySolution2(ListNode head, int n) {
         // 优化1：dog和person初始都指向哑节点
         ListNode pre = new ListNode(1, head), person = pre, dog = pre;
