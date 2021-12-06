@@ -21,7 +21,7 @@ public class P215KthLargestElement {
     }
 
     public int findKthLargest(int[] nums, int k) {
-        return solution1(nums, k);
+        return solution2(nums, k);
     }
 
     /**
@@ -84,6 +84,43 @@ public class P215KthLargestElement {
         Tool.swap(nums, i, r);
         // 最后返回锚点元素的位置
         return i;
+    }
+
+    /**
+     * 方法2：基于堆排序的快速选择
+     * 首先：构建大根堆
+     * 其次：每次取出堆顶最大值，取k-1次后，堆顶元素就是结果
+     */
+    private int solution2(int[] nums, int k) {
+        buildMaxHeap(nums);
+
+        for (int i = nums.length - 1; i >= nums.length - k + 1; i--) {
+            Tool.swap(nums, 0, i);
+            maxHeapify(nums, 0, i);
+        }
+        return nums[0];
+    }
+
+    private void buildMaxHeap(int[] nums) {
+        int heapSize = nums.length;
+        for (int i = heapSize / 2; i >= 0; i--) {
+            maxHeapify(nums, i, heapSize);
+        }
+    }
+
+    // 把以i为根节点的二叉树调整成大根堆
+    private void maxHeapify(int[] nums, int i, int heapSize) {
+        int l = i * 2 + 1, r = i * 2 + 2, largest = i;
+        if (l < heapSize && nums[l] > nums[largest]) {
+            largest = l;
+        }
+        if (r < heapSize && nums[r] > nums[largest]) {
+            largest = r;
+        }
+        if (largest != i) {
+            Tool.swap(nums, i, largest);
+            maxHeapify(nums, largest, heapSize);
+        }
     }
 
 }

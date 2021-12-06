@@ -5,6 +5,11 @@ import com.hc.algorithm.util.Tool;
 /**
  * 堆排序
  * 100个数字平均排序耗时25 515ns
+ * 时间复杂度：O(nlogn)
+ * 空间复杂度：O(1)
+ * 缺点：性能不如快速排序，因为堆排序调整时，是在数组中跳跃取数调整，距离可能很远，不在一个块中，
+ * 对cpu cache不友好，而快速排序调整的数字在数组中相邻不远，是局部顺序访问的
+ * 在通常应用中，快排优于堆排序
  */
 public class MaxHeapSort implements Sort {
 
