@@ -6,6 +6,7 @@ import java.util.Random;
 
 /**
  * 快速排序
+ * 100个整数平均排序耗时 41 444ns
  */
 public class QuickSort implements Sort {
 

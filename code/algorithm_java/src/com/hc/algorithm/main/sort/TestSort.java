@@ -5,16 +5,31 @@ import com.hc.algorithm.main.array.ArrayTool;
 public class TestSort {
 
     public static void main(String[] args) {
-        int[] array = ArrayTool.genArray(10);
-        ArrayTool.printArray(array);
-
+//        Sort sort = new MaxHeapSort();
         Sort sort = new QuickSort();
+
+        TestSort test = new TestSort();
+        test.sort(sort, 100);
+    }
+
+    private void sort(Sort sort, int repeatTimes) {
+        long totalTime = 0;
+        for (int i = 0; i < repeatTimes; i++) {
+            int[] array = ArrayTool.genArray(100);
+            totalTime += sortOneTime(sort, array);
+        }
+        long duration = totalTime / repeatTimes;
+        System.out.println("average duration " + duration);
+    }
+
+    private long sortOneTime(Sort sort, int[] array) {
+//        ArrayTool.printArray(array);
         long start = System.nanoTime();
         sort.sort(array);
-
         long duration = System.nanoTime() - start;
-        System.out.println(duration);
-        ArrayTool.printArray(array);
+//        System.out.println("one duration: " + duration);
+//        ArrayTool.printArray(array);
+        return duration;
     }
 
 }
