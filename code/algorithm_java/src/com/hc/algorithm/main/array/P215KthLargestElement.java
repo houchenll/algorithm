@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode;
+package com.hc.algorithm.main.array;
 
 import com.hc.algorithm.util.Tool;
 
@@ -25,7 +25,7 @@ public class P215KthLargestElement {
     }
 
     /**
-     * 官方解法1：优化快速排序法
+     * 官方解法1：基于快速排序的选择方法（快速选择法）
      * 1. 快速排序后选择倒数第k个元素返回
      * 2. 优化：每次快排后，如果分界序号小于倒数第k个，在右侧继续倒排，如果大于，在左侧快排，如果相等，直接返回当前元素
      * 3. 优化：快排时，随机取元素作为标准

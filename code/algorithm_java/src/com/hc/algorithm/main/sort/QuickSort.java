@@ -2,10 +2,14 @@ package com.hc.algorithm.main.sort;
 
 import com.hc.algorithm.util.Tool;
 
+import java.util.Random;
+
 /**
  * 快速排序
  */
 public class QuickSort implements Sort {
+
+    private Random random = new Random();
 
     @Override
     public void sort(int[] nums) {
@@ -22,10 +26,22 @@ public class QuickSort implements Sort {
      */
     private void quickSort(int[] nums, int l, int r) {
         if (l < r) {
-            int q = partition(nums, l, r);
+            int q = randomPartition(nums, l, r);
             quickSort(nums, l, q - 1);
             quickSort(nums, q + 1, r);
         }
+    }
+
+    /**
+     * 在[l,r]内任取一个序号处元素，移到尾部
+     * 然后对[l,r]区间内的数组快排一次，找到分界点元素的序号
+     */
+    private int randomPartition(int[] nums, int l, int r) {
+        // 从[l,r]内任取一个元素i
+        int i = random.nextInt(r - l + 1) + l;
+        // 把任取元素移到数组尾部，方便后续遍历数组时比较大小
+        Tool.swap(nums, i, r);
+        return partition(nums, l, r);
     }
 
     /**
