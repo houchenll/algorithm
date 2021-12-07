@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode;
+package com.hc.algorithm.main.array;
 
 /**
  * 121. 买卖股票的最佳时机
@@ -7,7 +7,7 @@ package com.hc.algorithm.leetcode;
  * 你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。设计一个算法来计算你所能获取的最大利润。
  * 返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。
  */
-public class P103BestTimeStock {
+public class P121BestTimeStock {
 
     /**
      * 买卖股票，期望是在最低点买入，在最高点卖出

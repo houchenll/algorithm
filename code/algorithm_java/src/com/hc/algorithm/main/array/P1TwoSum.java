@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode;
+package com.hc.algorithm.main.array;
 
 import com.hc.algorithm.util.PrintUtil;
 
@@ -54,7 +54,7 @@ public class P1TwoSum {
         // 理解：
         // 1. 使用map在O(1)时间内完成了查找target-nums[i]
         // 2. 遍历数组每个数字时，它们和之前遍历的数字比较，看能不能相加等于target
-        // 3. 先比较，先添加到map，避免了自己和自己相加等于target，也避免了两个相同的数字序号不同相加等于target时无法处理的问题
+        // 3. 先比较，后添加到map，避免了自己和自己相加等于target，也避免了两个相同的数字序号不同相加等于target时无法处理的问题
         int len = nums.length;
         HashMap<Integer, Integer> table = new HashMap<>(len);
         for (int i = 0; i < len; i++) {
