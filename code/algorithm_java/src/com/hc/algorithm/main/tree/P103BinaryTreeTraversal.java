@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode;
+package com.hc.algorithm.main.tree;
 
 import com.hc.algorithm.bean.TreeNode;
 
