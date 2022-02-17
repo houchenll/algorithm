@@ -1,4 +1,4 @@
-package com.hc.algorithm.main.stack;
+package com.hc.algorithm.main.stackqueue;
 
 import java.util.Stack;
 
