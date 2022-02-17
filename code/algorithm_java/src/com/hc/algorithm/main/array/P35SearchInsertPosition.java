@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode;
+package com.hc.algorithm.main.array;
 
 /**
  * 35. 搜索插入位置

@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode;
+package com.hc.algorithm.main.array;
 
 /**
  * https://leetcode-cn.com/problems/remove-element/

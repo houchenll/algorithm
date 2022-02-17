@@ -1,4 +1,4 @@
-package com.hc.algorithm.leetcode;
+package com.hc.algorithm.main.str;
 
 import java.util.HashMap;
 import java.util.Stack;
@@ -61,6 +61,7 @@ public class P20 {
                 if (')' == letter && '(' == topLetter
                         || ']' == letter && '[' == topLetter
                         || '}' == letter && '{' == topLetter) {
+                    System.out.println();
                 } else {
                     /// 若不可以关闭括弧，返回false
                     return false;

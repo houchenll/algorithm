@@ -1,6 +1,6 @@
-package com.hc.algorithm.leetcode;
+package com.hc.algorithm.main.num;
 
-import com.hc.algorithm.main.basic.NumberAlgorithm;
+import com.hc.algorithm.main.other.NumberAlgorithm;
 
 /**
  * https://leetcode.com/problems/palindrome-number/
