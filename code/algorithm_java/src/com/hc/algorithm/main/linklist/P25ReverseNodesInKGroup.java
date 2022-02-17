@@ -1,5 +1,8 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
+
 /**
  * 25. K 个一组翻转链表
  * https://leetcode-cn.com/problems/reverse-nodes-in-k-group/

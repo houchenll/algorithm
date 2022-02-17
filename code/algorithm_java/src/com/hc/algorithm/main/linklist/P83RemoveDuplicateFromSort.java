@@ -1,5 +1,7 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+
 /**
  * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/
  * 83. 删除排序链表中的重复元素

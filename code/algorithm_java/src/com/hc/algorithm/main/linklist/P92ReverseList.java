@@ -1,5 +1,8 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
+
 /**
  * https://leetcode-cn.com/problems/reverse-linked-list-ii/
  * 92. 反转链表

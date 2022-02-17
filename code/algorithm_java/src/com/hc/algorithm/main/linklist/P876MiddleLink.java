@@ -1,5 +1,7 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+
 /**
  * https://leetcode-cn.com/problems/middle-of-the-linked-list/
  * 876. 链表的中间结点

@@ -1,10 +1,10 @@
-package com.hc.algorithm.main.linklist;
+package com.hc.algorithm.bean;
 
 public class Node {
 
-    int val;
-    Node next;
-    Node random;
+    public int val;
+    public Node next;
+    public Node random;
 
     public Node(int val) {
         this.val = val;

@@ -1,4 +1,4 @@
-package com.hc.algorithm.main.linklist;
+package com.hc.algorithm.bean;
 
 public class ListNode {
     public int val;

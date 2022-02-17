@@ -1,4 +1,4 @@
-package com.hc.algorithm.main.array;
+package com.hc.algorithm.util;
 
 public class ArrayTool {
 

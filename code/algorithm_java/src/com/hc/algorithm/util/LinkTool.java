@@ -1,4 +1,6 @@
-package com.hc.algorithm.main.linklist;
+package com.hc.algorithm.util;
+
+import com.hc.algorithm.bean.ListNode;
 
 /**
  * 链表工具

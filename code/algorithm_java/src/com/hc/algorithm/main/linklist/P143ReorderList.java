@@ -1,5 +1,8 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

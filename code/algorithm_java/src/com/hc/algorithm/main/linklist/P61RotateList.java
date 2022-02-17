@@ -1,5 +1,8 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
+
 /**
  * 61. 旋转链表
  * https://leetcode-cn.com/problems/rotate-list/

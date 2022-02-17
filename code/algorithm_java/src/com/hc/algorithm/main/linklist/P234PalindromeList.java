@@ -1,5 +1,7 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+
 /**
  * https://leetcode-cn.com/problems/palindrome-linked-list/
  * 234. 回文链表

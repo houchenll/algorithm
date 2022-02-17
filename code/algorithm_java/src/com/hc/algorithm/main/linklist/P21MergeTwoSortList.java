@@ -1,6 +1,9 @@
 package com.hc.algorithm.main.linklist;
 
 
+import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
+
 /**
  * https://leetcode-cn.com/problems/merge-two-sorted-lists/
  * 21. 合并两个有序链表

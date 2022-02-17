@@ -1,6 +1,6 @@
 package com.hc.algorithm.main.sort;
 
-import com.hc.algorithm.main.array.ArrayTool;
+import com.hc.algorithm.util.ArrayTool;
 
 public class TestSort {
 

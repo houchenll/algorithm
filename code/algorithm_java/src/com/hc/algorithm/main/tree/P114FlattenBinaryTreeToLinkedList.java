@@ -1,6 +1,7 @@
 package com.hc.algorithm.main.tree;
 
 import com.hc.algorithm.bean.TreeNode;
+import com.hc.algorithm.util.TreeTool;
 
 /**
  * 114. 二叉树展开为链表

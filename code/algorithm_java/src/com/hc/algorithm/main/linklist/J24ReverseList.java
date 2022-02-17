@@ -1,5 +1,7 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+
 /**
  * 剑指 Offer 24. 反转链表
  * https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/

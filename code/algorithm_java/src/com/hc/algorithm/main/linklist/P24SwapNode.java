@@ -1,5 +1,7 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+
 /**
  * https://leetcode-cn.com/problems/swap-nodes-in-pairs/
  * 24. 两两交换链表中的节点

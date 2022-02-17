@@ -1,4 +1,4 @@
-package com.hc.algorithm.main.tree;
+package com.hc.algorithm.util;
 
 import com.hc.algorithm.bean.TreeNode;
 

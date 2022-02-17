@@ -1,5 +1,8 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
+
 /**
  * 328. 奇偶链表
  * https://leetcode-cn.com/problems/odd-even-linked-list/

@@ -1,5 +1,8 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
+
 /**
  * https://leetcode-cn.com/problems/insertion-sort-list/
  * 147. 对链表进行插入排序

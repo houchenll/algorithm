@@ -1,5 +1,8 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
+
 /**
  * https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
  * 19. 删除链表的倒数第 N 个结点

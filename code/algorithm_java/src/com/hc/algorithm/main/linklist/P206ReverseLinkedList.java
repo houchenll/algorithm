@@ -1,5 +1,8 @@
 package com.hc.algorithm.main.linklist;
 
+import com.hc.algorithm.bean.ListNode;
+import com.hc.algorithm.util.LinkTool;
+
 /**
  * 206. 反转链表
  * 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表
