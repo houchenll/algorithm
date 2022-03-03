@@ -6,7 +6,8 @@ public class TestSort {
 
     public static void main(String[] args) {
 //        Sort sort = new MaxHeapSort();
-        Sort sort = new QuickSort();
+//        Sort sort = new QuickSort();
+        Sort sort = new MergeSort();
 
         TestSort test = new TestSort();
         test.sort(sort, 100);
