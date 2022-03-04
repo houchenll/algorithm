@@ -11,10 +11,10 @@ import java.util.Stack;
  * 1. Open brackets must be closed by the same type of brackets.
  * 2. Open brackets must be closed in the correct order.
  */
-public class P20 {
+public class P20ValidParentheses {
 
     public static void main(String[] args) {
-        P20 p20 = new P20();
+        P20ValidParentheses p20 = new P20ValidParentheses();
         long start = System.nanoTime();
         System.out.println(p20.isValid("{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}{[()()()()]}"));
         System.out.println(System.nanoTime() - start);
@@ -76,7 +76,7 @@ public class P20 {
     private final HashMap<Character, Character> mappings;
 
     // Initialize hash map with mappings. This simply makes the code easier to read.
-    public P20() {
+    public P20ValidParentheses() {
         this.mappings = new HashMap<>();
         this.mappings.put(')', '(');
         this.mappings.put('}', '{');

@@ -8,10 +8,10 @@ import java.util.Set;
  * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
  * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度
  */
-public class P3 {
+public class P3LongestWithoutRepeat {
 
     public static void main(String[] args) {
-        P3 p3 = new P3();
+        P3LongestWithoutRepeat p3 = new P3LongestWithoutRepeat();
         String s = "pwwkew";
         System.out.println(p3.lengthOfLongestSubstring(s));
     }
