@@ -18,10 +18,11 @@ public class BinarySearch {
             // 如果l和r都是非常大的数字，它们的和可能会溢出，所以不要使用加法
             // l 加上范围/2
             int mid = l + (r - l) / 2;
+            int num = arr[mid];
 
-            if (target == arr[mid]) {
+            if (target == num) {
                 return mid;
-            } else if (target < arr[mid]) {
+            } else if (target < num) {
                 r = mid - 1;
             } else {
                 l = mid + 1;
