@@ -41,6 +41,7 @@ public class P54SpiralMatrix {
             ans.add(matrix[row][column]);
             // 把当前元素对应位置标记为已访问过
             visited[row][column] = true;
+            // 试探能否按当前方向是否可以继续前进，即试探是否需要换向，如果需要换向，换向
             // 计算继续按当前方向行进后的row和column
             int nextRow = row + directions[curDirection][0];
             int nextColumn = column + directions[curDirection][1];

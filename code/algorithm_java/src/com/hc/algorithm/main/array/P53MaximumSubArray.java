@@ -37,10 +37,11 @@ public class P53MaximumSubArray {
             if (preSum > 0) {
                 currentSum += preSum;
             }
+            preSum = currentSum;
+
             if (currentSum > maxSum) {
                 maxSum = currentSum;
             }
-            preSum = currentSum;
         }
 
         return maxSum;

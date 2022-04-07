@@ -27,7 +27,7 @@ public class P215KthLargestElement {
     /**
      * 官方解法1：基于快速排序的选择方法（快速选择法）
      * 1. 快速排序后选择倒数第k个元素返回
-     * 2. 优化：每次快排后，如果分界序号小于倒数第k个，在右侧继续倒排，如果大于，在左侧快排，如果相等，直接返回当前元素
+     * 2. 优化：每次快排后，如果分界序号小于倒数第k个，在右侧继续快排，如果大于，在左侧快排，如果相等，直接返回当前元素
      * 3. 优化：快排时，随机取元素作为标准
      * 4. 快排：把随机标的放到最后，然后遍历前面所有元素，小于等于标的时，移到左边。最后所有小于等于标的的元素都移到了左边
      * 5. 边界：最后把标的元素移到到小于等于它的元素的尾部，然后返回标的元素位置即可
@@ -94,8 +94,12 @@ public class P215KthLargestElement {
     private int solution2(int[] nums, int k) {
         buildMaxHeap(nums);
 
+        // 连续执行以下操作k次，就可以把第k个最大元素移到堆顶
+        // 如果只需要执行一次，那么没有必要执行，所以循环条件加1，避免这次无必要执行
         for (int i = nums.length - 1; i >= nums.length - k + 1; i--) {
+            // 把最大的元素移到最后
             Tool.swap(nums, 0, i);
+            // 数组规模减1后，重新构建大根堆，次最大元素移到堆顶
             maxHeapify(nums, 0, i);
         }
         return nums[0];
@@ -104,6 +108,7 @@ public class P215KthLargestElement {
     private void buildMaxHeap(int[] nums) {
         int heapSize = nums.length;
         for (int i = heapSize / 2; i >= 0; i--) {
+            // 先从底层开始构建大根堆
             maxHeapify(nums, i, heapSize);
         }
     }
@@ -118,7 +123,9 @@ public class P215KthLargestElement {
             largest = r;
         }
         if (largest != i) {
+            // 找到i和它两个子节点，这三个节点中最大者，把最大者调整到顶点
             Tool.swap(nums, i, largest);
+            // 原来顶点处较小值被移下来后，继续与当前子节点的子节点进行比较
             maxHeapify(nums, largest, heapSize);
         }
     }

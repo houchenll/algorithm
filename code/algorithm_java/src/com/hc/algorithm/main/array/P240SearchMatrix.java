@@ -71,9 +71,11 @@ public class P240SearchMatrix {
                 return true;
             }
             if (matrix[r][c] > target) {
+                // 向左是减小，向下是增大，此处需要减小，向左
                 // c列递增，没有等于target项，所以只能从左侧列中继续查找
                 c--;
             } else {
+                // 向左是减小，向下是增大，此处需要增大，向下
                 // 向下增大寻找target
                 r++;
             }
