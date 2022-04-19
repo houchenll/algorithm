@@ -33,7 +33,7 @@ public class P25ReverseNodesInKGroup {
      *         当前子分组head结点的前一个结点和tail结点的下一个结点。在子分组翻转完成后，pre指向新head，
      *         新tail指向next
      * 4. 头处理：创建一个hair指针，指向链表第一个结点。最后返回hair的下一个指针即可
-     * 5. 尾处理：头tail为空且不满k时，结束
+     * 5. 尾处理：头tail为空或不满k时，结束
      * 1ms > 17.55%
      * 38.5MB > 80.4%
      */

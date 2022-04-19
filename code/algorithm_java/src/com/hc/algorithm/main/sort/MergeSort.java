@@ -42,15 +42,19 @@ public class MergeSort implements Sort {
         int i = l, j = mid + 1;
         for (int k = l; k <= r; k++) {
             if (i > mid) {
+                // 左半部分已取完，取右侧值
                 nums[k] = tmp[j - l];
                 j++;
             } else if (j > r) {
+                // 右半部分已取完，取左侧值
                 nums[k] = tmp[i - l];
                 i++;
             } else if (tmp[i - l] < tmp[j - l]) {
+                // 左侧小，取左侧值
                 nums[k] = tmp[i - l];
                 i++;
             } else {
+                // 右侧小，取右侧值
                 nums[k] = tmp[j - l];
                 j++;
             }

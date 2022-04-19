@@ -26,10 +26,10 @@ public class P61RotateList {
      * k可能大于链表长度，所以先计算出链表长度，得到新k=k%len
      * 链表最后一个节点需要连接上第1个节点
      * 初始时pre指向头节点，pre是最后一个节点
-     * pre移动k个节点，然后记pre.next为cur，断开pre.next与cur连接，返回cur
+     * pre移动 len - k 个节点，然后记pre.next为cur，断开pre.next与cur连接，返回cur
      * 1. 初始化：遍历节点，计算长度，找到最后一个节点，并把pre指向最后一个节点，Pre.next指向头节点
      * 2. 得到新k=k%len
-     * 3. pre移动k个节点
+     * 3. pre移动 len - k 个节点
      * 4. 记pre.next为cur，断开pre.next与cur连接，返回cur
      * 时间复杂度：O(N)，两遍循环
      * 空间复杂度：O(1)，4个变量

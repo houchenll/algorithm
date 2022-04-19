@@ -7,10 +7,10 @@ package com.hc.algorithm.main.num;
  * Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the
  * value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
  */
-public class P7 {
+public class P7ReverseInteger {
 
     public static void main(String[] args) {
-        P7 p7 = new P7();
+        P7ReverseInteger p7 = new P7ReverseInteger();
         p7.reverse(1534236469);
     }
 

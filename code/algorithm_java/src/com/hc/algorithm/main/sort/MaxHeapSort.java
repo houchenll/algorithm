@@ -23,7 +23,7 @@ public class MaxHeapSort implements Sort {
         buildMaxHeap(nums);
 
         // 逐个取出堆顶元素，放到堆尾，把堆尾元素放到堆顶
-        // 然后把堆大小减1，再调整堆为大根堆
+        // 然后把堆大小减1 !!!，再调整堆为大根堆
         // 直到堆大小为1终止
         for (int i = nums.length - 1; i > 0; i--) {
             Tool.swap(nums, 0, i);

@@ -9,10 +9,10 @@ import com.hc.algorithm.main.other.NumberAlgorithm;
  * An integer is a palindrome when it reads the same backward as forward. For example,
  * 121 is palindrome while 123 is not.
  * */
-public class P9 {
+public class P9PalindromeNumber {
 
     public static void main(String[] args) {
-        P9 p9 = new P9();
+        P9PalindromeNumber p9 = new P9PalindromeNumber();
         System.out.println(p9.isPalindrome(121));
     }
 

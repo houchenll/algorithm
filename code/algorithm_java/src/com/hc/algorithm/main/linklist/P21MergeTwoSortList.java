@@ -90,8 +90,8 @@ public class P21MergeTwoSortList {
      * 递归
      * 当两个链表都不为空时，return l1[0] + merge(l1[1:], l2) 或 return l2[0] + merge(l1, l2[1:])
      * 当某链表为空时，直接返回另一链表
-     * 时间复杂度：O(n + m)O(n+m)，其中 nn 和 mm 分别为两个链表的长度
-     * 空间复杂度：O(n + m)O(n+m)，其中 nn 和 mm 分别为两个链表的长度
+     * 时间复杂度：O(n + m)，其中 n 和 m 分别为两个链表的长度
+     * 空间复杂度：O(n + m)，其中 n 和 m 分别为两个链表的长度
      */
     private ListNode recursion(ListNode l1, ListNode l2) {
         if (l1 == null) {
@@ -113,11 +113,11 @@ public class P21MergeTwoSortList {
      * 1. 只处理l1和l2都不为空的情况，当l1或l2为空时，停止遍历，直接拼接
      * 2. tail.next时不用断开与原链表连接
      * 3. 创建preHead结点，作为头结点的前一结点。最后返回preHead.next
-     * 时间复杂度：O(n + m)O(n+m)，其中 nn 和 mm 分别为两个链表的长度
-     * 空间复杂度：O(1)O(1)。我们只需要常数的空间存放若干变量。
+     * 时间复杂度：O(n + m)，其中 n 和 m 分别为两个链表的长度
+     * 空间复杂度：O(1)。我们只需要常数的空间存放若干变量。
      */
     private ListNode iterator(ListNode l1, ListNode l2) {
-        return LinkTool.mergeTwoSortList(l1, l2);
+        return LinkTool.mergeTwoLink(l1, l2);
     }
 
 }

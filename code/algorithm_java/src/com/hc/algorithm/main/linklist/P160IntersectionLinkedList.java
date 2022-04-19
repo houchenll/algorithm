@@ -11,6 +11,7 @@ import java.util.Set;
  * https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
  * 160. 相交链表
  * 给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回 null 。
+ * 当两个链表指向同一个节点时，因为单链表只有一个后继，所以后续链表两个链表是共享的
  */
 public class P160IntersectionLinkedList {
 
@@ -22,7 +23,7 @@ public class P160IntersectionLinkedList {
      * 证明：设链表A长度为m，未重复部分有a个结点，重复部分有c个结点，链表B长度为n，未重复部分有b个结点，重复部分有c个结点。
      * 情况一：两个链表相交
      * 如果a==b，则两个指针会同时到达c部分的起始结点，直接返回
-     * 如果a!=b，则pA指针到达尾部时走了a+c个结点，pB指针到达尾部时走了b+c个结点，继续走
+     * 如果a!=b，则pA指针到达相交点时走了a+c+b个结点，pB指针到达尾部时走了b+c+a个结点
      * 情况二：两个链表不相交
      * 如果m==n，则pA和pB同时到达尾部null，返回
      * 如果m!=n，则两个指针都会遍历完两个链表，分别走了m+n节点、n+m节点后，同时到达尾部null，返回

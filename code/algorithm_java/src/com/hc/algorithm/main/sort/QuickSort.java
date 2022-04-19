@@ -26,6 +26,7 @@ public class QuickSort implements Sort {
      * 都位于它的右边，最终x的位置就是q
      */
     private void quickSort(int[] nums, int l, int r) {
+        // 终止条件：l >= r
         if (l < r) {
             int q = randomPartition(nums, l, r);
             quickSort(nums, l, q - 1);
@@ -46,7 +47,14 @@ public class QuickSort implements Sort {
     }
 
     /**
+     * partition 方法1：
      * 对[l,r]区间内数组快排一次，找到分界点元素的序号
+     * i及其左边的元素都小于等于分界值
+     * 使用j遍历除分界值外的所有元素，把小于等于分界值的元素都移到左侧，以i为右界
+     *
+     * partition 方法2：稍微更复杂
+     * l左侧都是小于等于分界值的元素，r右侧都是大于它的元素，初始时l在左边界，r在分界元素前一个位置，
+     * 每次比较时，l和r只有一个移动，当l>r时终止
      */
     private int partition(int[] nums, int l, int r) {
         // i 表示小于等于锚点元素的最后一个元素的位置，初始在当前数组左边，l-1

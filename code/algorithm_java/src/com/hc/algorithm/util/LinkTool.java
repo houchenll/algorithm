@@ -40,20 +40,20 @@ public class LinkTool {
      */
     public static ListNode[] reverseLink(ListNode head, ListNode tail) {
         // prev为翻转后链表的第1个结点
-        ListNode prev = tail.next;
-        // p为当前链表的头结点
-        ListNode p = head;
+        ListNode first = tail.next;
+        // cur为当前链表的头结点
+        ListNode cur = head;
 
-        while (prev != tail) {
+        while (first != tail) {
             // 暂存当前头结点的下一个结点
-            ListNode nex = p.next;
+            ListNode next = cur.next;
 
             // 把当前头结点插入到翻转后列表的头部
-            p.next = prev;
-            prev = p;
+            cur.next = first;
+            first = cur;
 
             // 把暂存的头结点的下一个结点作为新的头结点
-            p = nex;
+            cur = next;
         }
 
         // 原链接的头、尾指针仍指针原来结点，但头变成了尾，尾变成了头
@@ -68,36 +68,37 @@ public class LinkTool {
      */
     public static ListNode reverseLink(ListNode head) {
         // 指向新链表的头结点
-        ListNode hair = new ListNode(0);
+        ListNode dummy = new ListNode(0);
 
+        // 因为翻转后原head不再有意义，所以直接使用head遍历链表
         while (head != null) {
-            // p指向当前头结点
+            // 缓存当前结点
             ListNode p = head;
-            // head指向头结点下一个结点
+            // head指向下一个结点
             head = head.next;
-            // p结点插入到新链表头部
-            p.next = hair.next;
-            hair.next = p;
+            // 缓存结点插入到新链表头部
+            p.next = dummy.next;
+            dummy.next = p;
         }
 
-        return hair.next;
+        return dummy.next;
     }
 
     /**
-     * 合并两个有序链表
+     * 合并两个链表
      * 1. 只处理l1和l2都不为空的情况，当l1或l2为空时，停止遍历，直接拼接
      * 2. tail.next时不用断开与原链表连接
      * 3. 创建preHead结点，作为头结点的前一结点。最后返回preHead.next
      * 时间复杂度：O(n + m)，n 和 mm 分别为两个链表的长度
      * 空间复杂度：O(1)
      */
-    public static ListNode mergeTwoSortList(ListNode l1, ListNode l2) {
+    public static ListNode mergeTwoLink(ListNode l1, ListNode l2) {
         if (l1 == null || l2 == null) {
             return l1 == null ? l2 : l1;
         }
 
-        ListNode preHead = new ListNode();
-        ListNode tail = preHead, p1 = l1, p2 = l2;
+        ListNode dummy = new ListNode();
+        ListNode tail = dummy, p1 = l1, p2 = l2;
 
         while (p1 != null && p2 != null) {
             if (p1.val <= p2.val) {
@@ -112,7 +113,7 @@ public class LinkTool {
 
         tail.next = p1 != null ? p1 : p2;
 
-        return preHead.next;
+        return dummy.next;
     }
 
     /**

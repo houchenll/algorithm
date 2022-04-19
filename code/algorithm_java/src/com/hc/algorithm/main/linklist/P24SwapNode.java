@@ -18,7 +18,7 @@ public class P24SwapNode {
      * 交换当前节点和它的下个节点；
      * 定义cur指向当前节点，pre为它的前节点
      * pre指向next，cur指向next.next，next指向cur，cur指向cur.next
-     * 终止条件：cur != null && cur.next != null
+     * 终止条件：cur != null && cur.next != null (至少有两个节点)
      * 时间复杂度：O(N)
      * 空间复杂度：O(1)
      * 0ms > 100%

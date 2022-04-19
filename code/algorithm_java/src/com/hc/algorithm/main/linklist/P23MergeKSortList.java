@@ -27,7 +27,7 @@ public class P23MergeKSortList {
     private ListNode solution1(ListNode[] lists) {
         ListNode ans = null;
         for (ListNode node : lists) {
-            ans = LinkTool.mergeTwoSortList(ans, node);
+            ans = LinkTool.mergeTwoLink(ans, node);
         }
         return ans;
     }
@@ -57,7 +57,7 @@ public class P23MergeKSortList {
             return null;
         }
         int mid = (l + r) >> 1;
-        return LinkTool.mergeTwoSortList(merge(lists, l, mid), merge(lists, mid + 1, r));
+        return LinkTool.mergeTwoLink(merge(lists, l, mid), merge(lists, mid + 1, r));
     }
 
     /**

@@ -48,6 +48,7 @@ public class P234PalindromeList {
         // 比较前半段和后半段是否相等，全部都相等才是回文
         boolean isPalindrome = true;
         ListNode p1 = head, p2 = dummy.next;
+        // p2略短，所以用p2遍历
         while (p2 != null) {
             if (p1.val != p2.val) {
                 isPalindrome = false;

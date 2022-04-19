@@ -42,6 +42,7 @@ public class J24ReverseList {
      * 3. 不用判断特殊情况
      */
     private ListNode solution2(ListNode head) {
+        // pre是新的头指针
         ListNode pre = null;
         ListNode cur = head;
         while (cur != null) {

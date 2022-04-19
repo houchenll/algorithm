@@ -16,7 +16,7 @@ public class P876MiddleLink {
             return head;
         }
         ListNode slow = head, fast = head;
-        while (fast.next != null && head.next.next != null) {
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -35,5 +35,7 @@ public class P876MiddleLink {
         }
         return slow;
     }
+
+    // 2022.4.19 复习进度
 
 }

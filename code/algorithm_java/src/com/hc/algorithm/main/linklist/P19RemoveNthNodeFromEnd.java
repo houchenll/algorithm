@@ -8,6 +8,7 @@ import com.hc.algorithm.util.LinkTool;
  * 19. 删除链表的倒数第 N 个结点
  * 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点
  * 进阶：你能尝试使用一趟扫描实现吗？
+ * 1 <= n <= sz
  */
 public class P19RemoveNthNodeFromEnd {
 
@@ -37,6 +38,8 @@ public class P19RemoveNthNodeFromEnd {
             first = first.next;
             second = second.next;
         }
+        // 1 <= n <= sz，所以second.next != null
+        // 倒数第0个节点是最后一个节点，倒数第1个节点是后序第二个节点
         second.next = second.next.next;
         return dummy.next;
     }
