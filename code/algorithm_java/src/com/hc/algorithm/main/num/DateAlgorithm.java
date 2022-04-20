@@ -1,4 +1,4 @@
-package com.hc.algorithm.main.other;
+package com.hc.algorithm.main.num;
 
 /**
  * 日期相关算法

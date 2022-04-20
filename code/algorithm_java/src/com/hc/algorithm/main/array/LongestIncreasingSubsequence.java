@@ -1,4 +1,4 @@
-package com.hc.algorithm.main.other;
+package com.hc.algorithm.main.array;
 
 /**
  * 给定一个整数列表，找出它的长度最长的递增子序列

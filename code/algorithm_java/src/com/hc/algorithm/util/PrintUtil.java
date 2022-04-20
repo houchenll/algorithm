@@ -10,7 +10,11 @@ public class PrintUtil {
     }
 
     public static void printIntArray(int[] nums) {
-        System.out.print("[");
+        printIntArray(nums, "");
+    }
+
+    public static void printIntArray(int[] nums, String prefix) {
+        System.out.print(prefix + "[");
         for (int i = 0; i < nums.length; i++) {
             System.out.print(nums[i]);
             if (i < nums.length - 1) {

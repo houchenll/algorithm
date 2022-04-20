@@ -16,7 +16,8 @@ public class P225StackByQueue {
     }
 
     public void push(int x) {
-        // 先把数字压入辅助队列
+        // 先把数字压入辅助队列尾部
+        // offer 添加失败时返回false，不会抛出异常
         q2.offer(x);
         // 把队列1中的所有元素出队并压入辅助队列，这样队列头部就是最后压入的元素
         while (!q1.isEmpty()) {

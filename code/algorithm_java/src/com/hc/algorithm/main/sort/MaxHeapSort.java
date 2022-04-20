@@ -42,6 +42,9 @@ public class MaxHeapSort implements Sort {
         }
     }
 
+    /**
+     * 对以i为根的子树构建大根堆
+     */
     private void maxHeapify(int[] nums, int i, int heapSize) {
         int l = i * 2 + 1, r = i * 2 + 2, largest = i;
         if (l < heapSize && nums[l] > nums[largest]) {

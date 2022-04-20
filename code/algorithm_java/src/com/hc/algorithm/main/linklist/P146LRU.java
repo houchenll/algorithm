@@ -1,4 +1,4 @@
-package com.hc.algorithm.main.other;
+package com.hc.algorithm.main.linklist;
 
 import java.util.HashMap;
 import java.util.Map;

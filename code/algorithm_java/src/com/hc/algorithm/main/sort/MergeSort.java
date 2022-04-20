@@ -22,8 +22,10 @@ public class MergeSort implements Sort {
         }
         // 有2个或以上元素
         int mid = l + (r - l) / 2;
+        // 对左、右子区间递归排序
         mergeSort(nums, l, mid);
         mergeSort(nums, mid + 1, r);
+        // 把排序好的左、右子区间合并
         merge(nums, l, mid, r);
     }
 

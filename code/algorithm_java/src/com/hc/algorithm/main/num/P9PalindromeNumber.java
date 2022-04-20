@@ -1,7 +1,5 @@
 package com.hc.algorithm.main.num;
 
-import com.hc.algorithm.main.other.NumberAlgorithm;
-
 /**
  * https://leetcode.com/problems/palindrome-number/
  * 9. Palindrome Number 回文

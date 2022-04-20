@@ -1,6 +1,6 @@
 package com.hc.algorithm.hduoj.p11;
 
-import com.hc.algorithm.main.other.NumberAlgorithm;
+import com.hc.algorithm.main.num.NumberAlgorithm;
 
 import java.util.Scanner;
 

@@ -4,8 +4,8 @@ import com.hc.algorithm.util.Tool;
 
 /**
  * 冒泡排序
- * */
-public class BubbleSort {
+ */
+public class BubbleSort implements Sort {
 
     /**
      * 冒泡排序，从小到大
@@ -14,16 +14,17 @@ public class BubbleSort {
      * 又因为每次操作是常数时间，记为O(1)，故算法复杂度为O(n^2)
      *
      * 在工程上不再使用
-     * */
-    public static void bubbleSort(int[] array) {
-        if (null == array || array.length < 2) {
+     */
+    @Override
+    public void sort(int[] nums) {
+        if (null == nums || nums.length < 2) {
             return;
         }
 
-        for (int end = array.length - 1; end > 0; end--) {
+        for (int end = nums.length - 1; end > 0; end--) {
             for (int i = 0; i < end; i++) {
-                if (array[i] > array[i + 1])
-                    Tool.swap(array, i, i + 1);
+                if (nums[i] > nums[i + 1])
+                    Tool.swap(nums, i, i + 1);
             }
         }
     }

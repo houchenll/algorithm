@@ -1,4 +1,4 @@
-package com.hc.algorithm.main.other;
+package com.hc.algorithm.main.num;
 
 /**
  * 关于数字的算法

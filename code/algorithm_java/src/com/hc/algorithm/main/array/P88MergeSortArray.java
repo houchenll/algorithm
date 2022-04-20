@@ -89,4 +89,47 @@ public class P88MergeSortArray {
         }
     }
 
+    /**
+     * 同花顺面试时实现
+     */
+    public int[] mergeSortedArray(int[] nums1, int[] nums2) {
+        if (null == nums1 || nums1.length == 0) {
+            return nums2;
+        }
+        if (null == nums2 || nums2.length == 0) {
+            return nums1;
+        }
+
+        int len = nums1.length + nums2.length;
+        int[] result = new int[len];
+
+        int indexA = 0, indexB = 0;
+        int indexResult = 0;
+
+        while (indexA < nums1.length && indexB < nums2.length) {
+            int num;
+            if (nums1[indexA] <= nums2[indexB]) {
+                num = nums1[indexA];
+                indexA++;
+            } else {
+                num = nums2[indexB];
+                indexB++;
+            }
+            result[indexResult] = num;
+            indexResult++;
+        }
+
+        if (indexA < nums1.length) {
+            for (int i = indexA; i < nums1.length; i++) {
+                result[indexResult++] = nums1[i];
+            }
+        } else if (indexB < nums2.length) {
+            for (int i = indexB; i < nums2.length; i++) {
+                result[indexResult++] = nums2[i];
+            }
+        }
+
+        return result;
+    }
+
 }

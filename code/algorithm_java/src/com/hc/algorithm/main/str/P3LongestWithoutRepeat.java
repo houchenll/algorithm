@@ -61,13 +61,18 @@ public class P3LongestWithoutRepeat {
         // 哈希集合，记录每个字符是否出现过
         Set<Character> occ = new HashSet<>();
         int n = s.length();
-        // 右指针，初始值为 -1，相当于我们在字符串的左边界的左侧，还没有开始移动
+        // rk是滑动窗口的右边界，默认窗口大小为0，所以rk在-1位置
         int rk = -1, ans = 0;
+        // i是滑动窗口左边界，默认在起始位置
         for (int i = 0; i < n; ++i) {
             if (i != 0) {
+                // [rk+1]与[i, rk]中某个字符重复，尝试收缩窗口左边界一位，观察[rk+1]是否还与窗口中元素重复
                 // 左指针向右移动一格，移除一个字符
                 occ.remove(s.charAt(i - 1));
             }
+            // 探测[rk+1]是否与[i,rk]中元素重复
+            // 如果不重复，窗口右边界右移一位，并把窗口新元素添加到set中
+            // 如果重复，窗口右边界停留在rk位置，收缩窗口左边界，直到不重复为止
             while (rk + 1 < n && !occ.contains(s.charAt(rk + 1))) {
                 // 不断地移动右指针
                 occ.add(s.charAt(rk + 1));

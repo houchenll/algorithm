@@ -27,6 +27,7 @@ public class BigNumSum36 {
         int carry = 0;
         while (i >= 0 || j >= 0 || carry > 0) {
             // i或j出界时，取0，未出界时，取对应10进制数字
+            // 转化为10进制执行加法，再把结果转换为36进制
             int x = i >= 0 ? getInt(num1.charAt(i)) : 0;
             int y = j >= 0 ? getInt(num2.charAt(j)) : 0;
             int temp = x + y + carry;

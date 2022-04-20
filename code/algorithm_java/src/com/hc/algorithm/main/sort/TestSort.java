@@ -1,16 +1,20 @@
 package com.hc.algorithm.main.sort;
 
 import com.hc.algorithm.util.ArrayTool;
+import com.hc.algorithm.util.PrintUtil;
+import com.hc.algorithm.util.Tool;
 
 public class TestSort {
 
     public static void main(String[] args) {
 //        Sort sort = new MaxHeapSort();
 //        Sort sort = new QuickSort();
-        Sort sort = new MergeSort();
+//        Sort sort = new MergeSort();
+        Sort sort = new InsertionSort();
 
         TestSort test = new TestSort();
-        test.sort(sort, 100);
+//        test.sort(sort, 100);
+        test.sortOnce(sort);
     }
 
     private void sort(Sort sort, int repeatTimes) {
@@ -21,6 +25,15 @@ public class TestSort {
         }
         long duration = totalTime / repeatTimes;
         System.out.println("average duration " + duration);
+    }
+
+    private void sortOnce(Sort sort) {
+        int[] array = ArrayTool.genArray(10);
+        PrintUtil.printIntArray(array, "origin array: ");
+
+        sort.sort(array);
+
+        PrintUtil.printIntArray(array, "sorted array: ");
     }
 
     private long sortOneTime(Sort sort, int[] array) {

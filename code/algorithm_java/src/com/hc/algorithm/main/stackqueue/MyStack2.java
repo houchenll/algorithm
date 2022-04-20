@@ -30,6 +30,7 @@ public class MyStack2 {
         } else if (newNum < getMin()) {
             stackMin.push(newNum);
         } else {
+            // 为什么重复添加一次？方便弹出操作
             int newMin = stackMin.peek();
             stackMin.push(newMin);
         }
